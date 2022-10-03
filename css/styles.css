@@ -1,0 +1,277 @@
+html {
+    margin: 0;
+    padding: 0;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+
+  }
+  .transition{
+    width: 100%;
+    height: 100vh;
+  
+  }
+  .night{
+    height: 100vh;
+    width: 100%;
+    background: black;
+    position: relative;
+    overflow: hidden;
+  }
+  img.stars {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    animation-name: blinking;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+  }
+  .sky {
+    background-image: linear-gradient(turquoise, rgb(10, 132, 163));
+    position: absolute;
+    top: 0;
+    height: 75vh;
+    width: 100%;
+    animation-name: dawntilldusk;
+    animation-duration: 43s;
+    animation-timing-function: ease-in;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+  }
+  img.rain{
+    width: 150px;
+    height: 135px;
+    position: absolute;
+    top: 0px;
+    right: -200px;
+    animation-name: rain;
+    animation-delay: 14s;
+    animation-duration: 16s;
+    animation-iteration-count:1;
+    animation-timing-function: linear;
+  }
+  img.cloud1 {
+    width: 140px;
+    height: 120px;
+    position: absolute;
+    top: -50px;
+    right: -200px;
+    animation-name: cloud1;
+    animation-delay: 8s;
+    animation-duration: 23s;
+    animation-iteration-count:1;
+    animation-timing-function: linear;
+  }
+  img.cloud2 {
+    width: 140px;
+    height: 120px;
+    position: absolute;
+    right: -200px;
+    animation-name: cloud2;
+    animation-delay: 12s;
+    animation-duration: 18s;
+    animation-iteration-count:1;
+    animation-timing-function: linear;
+  }
+  img.sun {
+    width:125px;
+    height:125px;
+    position: absolute;
+    top: 150%;
+    animation-name: sunshine;
+    animation-delay: 8s;
+    animation-duration: 33s;
+    animation-iteration-count:1;
+    animation-timing-function: linear;
+  }
+  img.car1 {
+    position: absolute;
+    bottom:-15px;
+    left: -150px;
+    width: 150px;
+    height: 102px;
+    animation-name: drive;
+    animation-delay: 14s;
+    animation-duration: 20s;
+    animation-timing-function: linear;
+    animation-iteration-count:1;
+  }
+  img.car2 {
+    position: absolute;
+    bottom:-15px;
+    left: -170px;
+    width: 170px;
+    height: 110px;
+    animation-name: drive;
+    animation-delay: 29s;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count:1;
+  }
+  .ground {
+    background-image: linear-gradient(green, rgb(15, 63, 15));
+    position: absolute;
+    bottom: 0;
+    height: 25vh;
+    width: 100%;
+    animation-name: dawntilldusk;
+    animation-duration: 43s;
+    animation-timing-function: ease-in;
+    animation-iteration-count:1;
+    animation-fill-mode: forwards;
+  }
+  @keyframes dawntilldusk{
+    0%{
+      opacity: 0;
+    }
+    18%{
+      opacity: 1;
+    }
+    96%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  
+  }
+  @keyframes blinking{
+    0%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 1;
+    }
+    100%{
+      opacity: 0;
+    }
+  }
+  @keyframes drive{
+    0%{
+      transform: translateX(-100px);
+  }
+    100%{
+      transform: translateX(2000px);
+  }
+  }
+  @keyframes cloud1{
+    0%{
+      right: -200px;
+    }
+    100%{
+      right: 100%;
+    }
+  }
+  @keyframes cloud2{
+    0%{
+      right: -200px;
+    }
+    100%{
+      right: 100%;
+    }
+  }
+  @keyframes rain{
+    0%{
+    right: -200px;
+    }
+    100%{
+      right: 100%;
+    }
+  
+  }
+  @keyframes sunshine{
+    0%{
+     top:105%;
+     left: 0px;
+  }
+  10%{
+    top: -35px;
+    left: 0px;
+  }
+  80%{
+    top: -35px;
+    left: 80%;
+  }
+  100%{
+    top: 110%;
+    left: 100%;
+  }
+  }
+  #wrapper {
+    position: relative;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  .namebox {
+    background-color: #fff;
+    box-sizing: border-box;
+    width: 375px;
+    height: 100px;
+    margin: 10px;
+    border: 2px solid black;
+    padding: 15px;
+    text-align: center;
+    float: left;
+  
+  }
+  .monalisa {
+    background-image: url(../images/monalisamask.jpg);
+    background-position: center;
+    width: 375px;
+    height: 375px;
+    top: -375px;
+    left: 10px;
+    z-index: -1;
+    position: absolute; 
+    transition-duration: 2s;
+    transition-property: transform;
+  }
+  .monkey {
+    background-image: url(../images/monkey.jpg);
+    background-position: center;
+    box-sizing: border-box;
+    width: 374px;
+    height: 375px;
+    margin: 0;
+    left: 405px;
+    top: -375px;
+    z-index: -1;
+    position: absolute; 
+    transition-duration: 2s;
+    transition-property: transform;
+  }
+  .me {
+    background-image: url(../images/me.jpg);
+    background-position: center;
+    box-sizing: border-box;
+    width: 375px;
+    height: 375px;
+    margin: 0;
+    top: -375px;
+    left: 800px;
+    z-index: -1;
+    position: absolute; 
+    transition-duration: 2s;
+    transition-property: transform;
+  }
+  .overlay {
+    background: #fff;
+    box-sizing: border-box;
+    width: 100%;
+    height: 10px;
+    margin: 0;
+    top: 0;
+    left: 10px;
+    position: absolute; 
+  }
+  .namebox:hover .monalisa {
+    transform:translateY(480px);
+  }
+  .namebox:hover .monkey {
+    transform:translateY(480px);
+  }
+  .namebox:hover .me {
+    transform:translateY(480px);
+  } 
